@@ -33,66 +33,6 @@
             };
         };
 
-        exynos4412-i9305 {
-            description = "exynos4412-i9305.dtb";
-            data = /incbin/("./exynos4412-i9305.dtb");
-            type = "flat_dt";
-            arch = "arm";
-            compression = "none";
-            load = <0x60000000>;
-            hash-1 {
-                algo = "crc32";
-            };
-        };
-
-        exynos4412-n7100 {
-            description = "exynos4412-n7100.dtb";
-            data = /incbin/("./exynos4412-n7100.dtb");
-            type = "flat_dt";
-            arch = "arm";
-            compression = "none";
-            load = <0x60000000>;
-            hash-1 {
-                algo = "crc32";
-            };
-        };
-
-        exynos4412-n7105 {
-            description = "exynos4412-n7105.dtb";
-            data = /incbin/("./exynos4412-n7105.dtb");
-            type = "flat_dt";
-            arch = "arm";
-            compression = "none";
-            load = <0x60000000>;
-            hash-1 {
-                algo = "crc32";
-            };
-        };
-
-        dto-ea8061 {
-            description = "exynos4412-n710x-ea8061.dtbo";
-            data = /incbin/("./exynos4412-n710x-ea8061.dtb");
-            type = "flat_dt";
-            arch = "arm";
-            compression = "none";
-            load = <0x6fc00000>;
-            hash-1 {
-                algo = "crc32";
-            };
-        };
-
-        dto-s6evr02 {
-            description = "exynos4412-n710x-s6evr02.dtbo";
-            data = /incbin/("./exynos4412-n710x-s6evr02.dtb");
-            type = "flat_dt";
-            arch = "arm";
-            compression = "none";
-            load = <0x6fc00000>;
-            hash-1 {
-                algo = "crc32";
-            };
-        };
-
         ramdisk {
             description = "buildroot ramdisk";
             data = /incbin/("./rootfs.cpio.lzma");
@@ -113,34 +53,5 @@
             fdt = "exynos4412-i9300";
             ramdisk = "ramdisk";
         };
-
-        exynos4412-i9305 {
-            description = "exynos4412-i9305";
-            kernel = "kernel";
-            fdt = "exynos4412-i9305";
-            ramdisk = "ramdisk";
-        };
-
-        exynos4412-n7100 {
-            description = "exynos4412-n7100";
-            kernel = "kernel";
-            fdt = "exynos4412-n7100";
-            ramdisk = "ramdisk";
-        };
-
-        exynos4412-n7105 {
-            description = "exynos4412-n7105";
-            kernel = "kernel";
-            fdt = "exynos4412-n7105";
-            ramdisk = "ramdisk";
-        };
-
-        exynos4412-n710x-ea8061 {
-            fdt = "dto-ea8061";
-        };
-
-        exynos4412-n710x-s6evr02 {
-            fdt = "dto-s6evr02";
-        };
-    };
+   };
 };
